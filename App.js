@@ -8,17 +8,17 @@
 
 import React from 'react';
 import type {Node} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import { SafeAreaView, StyleSheet, View } from "react-native";
 import LinearGradient from 'react-native-linear-gradient';
+import RoundedButton from './components/UI/atoms/Buttons/RoundedButton';
 
 const App: () => Node = () => {
   return (
-    <LinearGradient
-      style={Styles.container}
-      colors={['#c780ff', '#471bc5']}
-      start={{x: 1, y: 0}}
-      end={{x: -1, y: 1}}
-    />
+    <LinearGradient style={Styles.container} colors={['#c780ff', '#471bc5']}>
+      <SafeAreaView >
+        <RoundedButton>test</RoundedButton>
+      </SafeAreaView>
+    </LinearGradient>
   );
 };
 
