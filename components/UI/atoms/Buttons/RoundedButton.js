@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, StyleSheet, Text, TouchableOpacity } from "react-native";
+import {Button, StyleSheet, Text, TouchableOpacity } from "react-native";
 
 function RoundedButton({children, weight, invertColor = false, onPress}) {
 

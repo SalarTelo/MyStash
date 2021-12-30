@@ -8,25 +8,36 @@
 
 import React from 'react';
 import type {Node} from 'react';
-import { SafeAreaView, StyleSheet, View } from "react-native";
-import LinearGradient from 'react-native-linear-gradient';
-import RoundedButton from './components/UI/atoms/Buttons/RoundedButton';
+import HomeScreen from './screens/HomeScreen';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {Text, View} from 'react-native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+
+const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
+
+function Test({navigation}) {
+  return (
+    <View>
+      <Text>Test</Text>
+    </View>
+  );
+}
 
 const App: () => Node = () => {
   return (
-    <LinearGradient style={Styles.container} colors={['#c780ff', '#471bc5']}>
-      <SafeAreaView >
-        <RoundedButton>test</RoundedButton>
-      </SafeAreaView>
-    </LinearGradient>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{headerShown: false}}
+        />
+
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
-
-let Styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'gray',
-    height: '100%',
-  },
-});
 
 export default App;
