@@ -26,7 +26,6 @@ function HomeScreen({navigation}) {
       flex: 1,
     },
   });
-  };
 
   return (
     <LinearGradient colors={['#c780ff', '#471bc5']} useAngle={true} angle={230}>
