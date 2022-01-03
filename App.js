@@ -13,6 +13,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Text, View} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import CameraScreen from './screens/CameraScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -29,12 +30,12 @@ const App: () => Node = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+
         <Stack.Screen
-          name="Home"
-          component={HomeScreen}
+          name={'Camera'}
+          component={CameraScreen}
           options={{headerShown: false}}
         />
-
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -30,11 +30,6 @@ function HomeScreen({navigation}) {
   return (
     <LinearGradient colors={['#c780ff', '#471bc5']} useAngle={true} angle={230}>
       <SafeAreaView style={{height: '100%'}}>
-        <Button
-          title={'test'}
-          onPress={() => {
-          }}
-        />
 
         <View style={styles.headerContainer}>
           <Text style={{fontSize: 40, fontWeight: '700', color: 'white'}}>
