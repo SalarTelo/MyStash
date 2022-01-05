@@ -1,4 +1,4 @@
-import {Platform, StyleSheet, Text, TouchableOpacity} from 'react-native';
+import { Platform, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from 'react';
 
 function LoginView() {
@@ -20,7 +20,7 @@ function LoginView() {
     },
   });
   return (
-    <>
+    <View style={{width: '100%', flex: 1, justifyContent: 'center', alignItems: 'center', marginBottom: 100}}>
       <Text
         style={{
           marginBottom: 10,
@@ -56,7 +56,7 @@ function LoginView() {
           Hjälp
         </Text>
       </TouchableOpacity>
-    </>
+    </View>
   );
 }
 export default LoginView;

@@ -32,8 +32,8 @@ const App: () => Node = () => {
       <Stack.Navigator>
 
         <Stack.Screen
-          name={'Camera'}
-          component={CameraScreen}
+          name={'HomeScreen'}
+          component={HomeScreen}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
