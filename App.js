@@ -8,32 +8,18 @@
 
 import React from 'react';
 import type {Node} from 'react';
-import HomeScreen from './screens/HomeScreen';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Text, View} from 'react-native';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import CameraScreen from './screens/CameraScreen';
-
+import SpacesScreen from './screens/SpacesScreen';
 const Stack = createNativeStackNavigator();
-const Tab = createBottomTabNavigator();
-
-function Test({navigation}) {
-  return (
-    <View>
-      <Text>Test</Text>
-    </View>
-  );
-}
 
 const App: () => Node = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-
         <Stack.Screen
-          name={'Camera'}
-          component={CameraScreen}
+          name={'Spaces'}
+          component={SpacesScreen}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
