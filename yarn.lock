@@ -5757,6 +5757,8 @@
     "react-freeze" "^1.0.0"
     "warn-once" "^0.1.0"
 
+
+
 "react-native-windows@*":
   "integrity" "sha512-iHsKgZBXasyXyKmbEeSNEivEnwR7EBm5H9pJRxeV2VLLug216TL6BKRqouwEP4Bw2/lbtrW5Wzb5oayGvTFRUg=="
   "resolved" "https://registry.npmjs.org/react-native-windows/-/react-native-windows-0.66.5.tgz"
