@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -12,7 +12,7 @@ import DashboardView from '../components/DashboardView';
 import LoginView from '../components/LoginView';
 
 function HomeScreen({navigation}) {
-  const [isLoggedIn, setLoggedIn] = useState(false);
+  const [isLoggedIn, setLoggedIn] = useState(true);
   return (
     <LinearGradient colors={['#c780ff', '#471bc5']} useAngle={true} angle={230}>
       <SafeAreaView style={{height: '100%'}}>
@@ -25,7 +25,7 @@ function HomeScreen({navigation}) {
         <View style={styles.contentContainer}>
           {/*Make this swap between Login view and Home view without moving the background. Look into how animations work in react*/}
           {/*Make the transition animate for a smoother experience.*/}
-          {isLoggedIn ? <DashboardView/> : <LoginView/>}
+          {isLoggedIn ? <DashboardView /> : <LoginView />}
         </View>
 
         <View style={styles.footerContainer}>
