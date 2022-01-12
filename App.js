@@ -9,6 +9,7 @@
 import React from 'react';
 import type {Node} from 'react';
 import HomeScreen from './screens/HomeScreen';
+import GuideScreen from './screens/GuideScreen';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Text, View} from 'react-native';
