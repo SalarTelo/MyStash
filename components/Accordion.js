@@ -1,7 +1,6 @@
-import React, {useState} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
-import {Collapse,CollapseHeader, CollapseBody } from 'accordion-collapse-react-native';
-import Icon from "react-native-vector-icons/MaterialIcons";
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, Image } from 'react-native';
+import { Collapse, CollapseHeader, CollapseBody } from 'accordion-collapse-react-native';
 
 const Accordion = ({title,data}) => {
 
@@ -11,8 +10,11 @@ const [toggle, setToggle] = useState(false);
        <View>
           <Collapse onToggle={()=> setToggle(!toggle)}style={styles.bodyContainer}>
             <CollapseHeader style={styles.headerContainer}>
-              <View>
+              <View style={{flexDirection: 'row',justifyContent: 'flex-start'}}>
                 <Text style={[styles.titleContainer, toggle === true ? styles.titleColor : null ]}>{title}</Text>
+                <Image source={require('../assets/png/arrow_icon.png')} 
+                style={[styles.arrowImage, toggle === true ? styles.arrowDown : styles.arrowUp]}
+                />
               </View>
             </CollapseHeader>
             <CollapseBody style={styles.textContainer}>
@@ -21,7 +23,6 @@ const [toggle, setToggle] = useState(false);
          </Collapse>
        </View>
     )
-
 }
 
 const styles = StyleSheet.create({
@@ -45,6 +46,22 @@ const styles = StyleSheet.create({
         marginTop: 0,
         marginRight: 50,
         marginLeft: 50,
+    },
+    arrowImage: {
+      width: 20, 
+      height: 20, 
+      resizeMode: 'stretch', 
+      tintColor: '#000',
+      marginTop: 3,
+      marginLeft: 300,
+      position: 'absolute',
+    },
+    arrowUp: {
+      transform: [{rotate:'-90deg'}],
+      tintColor: '#C2C2C2',
+    },
+    arrowDown: {
+      transform: [{rotate:'90deg'}],
     },
 
   });

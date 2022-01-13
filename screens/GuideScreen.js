@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, SafeAreaView,StyleSheet, Image, MaskedViewIOS} from 'react-native';
+import { Text, View, SafeAreaView, StyleSheet, Image, MaskedViewIOS } from 'react-native';
 import Accordion from '../components/Accordion';
 import LinearGradient from 'react-native-linear-gradient';
 import * as Data from '../public/data.json';
@@ -16,18 +16,9 @@ const GuideScreen = () => {
 
     return (
      <SafeAreaView >
-        <View style={{
-              justifyContent: 'space-evenly',
-              alignItems: 'center',
-              }}>
-          <Image source={require('../assets/png/info_icon.png')} style={{
-              width: 90,
-              height: 90,
-              opacity: 0.8,
-              marginTop: 46,
-              tintColor: '#000',
-            }}/>
-          <GradientText style={{fontSize: 44, fontWeight: '700', marginTop: 44, marginBottom: 45}}>
+        <View style={{justifyContent: 'space-evenly', alignItems: 'center',}}>
+          <Image source={require('../assets/png/info_icon.png')} style={styles.imageContainer}/>
+          <GradientText style={styles.gradientContainer}>
             Guide
           </GradientText>
           {Data.guideText.map(data =>(
@@ -41,20 +32,19 @@ const GuideScreen = () => {
 }
 
 const styles = StyleSheet.create({
-    headerContainer: {
-      marginTop: 10,
-      alignItems: 'center',
-      justifyContent: 'center',
+    imageContainer: {
+      width: 90,
+      height: 90,
+      opacity: 0.8,
+      marginTop: 46,
+      tintColor: '#000',
     },
-    footerContainer: {
-      alignItems: 'center',
-      justifyContent: 'space-around',
-      flexDirection: 'row',
+    gradientContainer: {
+      fontSize: 44,
+       fontWeight: '700',
+       marginTop: 44, 
+       marginBottom: 45
     },
-    contentContainer: {
-      flex: 1,
-    },
-
   });
 
 export default GuideScreen;
