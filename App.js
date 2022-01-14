@@ -8,6 +8,7 @@
 
 import React from 'react';
 import type {Node} from 'react';
+import GuideScreen from './screens/GuideScreen';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import CameraScreen from './screens/CameraScreen';
